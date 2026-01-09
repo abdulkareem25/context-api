@@ -8,14 +8,7 @@ const ProductsProvider = ({ children }) => {
     const [products, setProducts] = useState([])
 
     const fetchProducts = async () => {
-        // const products = await getProducts();
-        setProducts([{
-            name: 'laptop',
-            price: '₹50,000',
-            brand: 'Asus',
-            ram: '12gb',
-            ssd: '512gb'
-        }])
+        setProducts(await getProducts());
     };
     useEffect(() => {
         fetchProducts();
