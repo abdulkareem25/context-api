@@ -1,9 +1,16 @@
-import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Products from './components/Products'
+import Home from './components/Home'
+import ProductDetails from './components/ProductDetails'
 
 const App = () => {
   return (
-    <div>
-      App Component
+    <div className='app'>
+      <Routes >
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/products/:id' element={<ProductDetails />} />
+      </Routes>
     </div>
   )
 }

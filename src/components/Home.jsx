@@ -1,0 +1,18 @@
+import { useNavigate } from "react-router-dom"
+
+const Home = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className='home'>
+      <h1>Click this button to Explore Products</h1>
+      <button
+      onClick={() => {navigate('/products')}}
+      >
+        Explore Products
+      </button>
+    </div>
+  )
+}
+
+export default Home
